@@ -61,4 +61,11 @@ Well, with the exception of uppercase letters. They are always “less” than l
 <br>
 To visually see it from "largest" to "smallest": <br>
 `z > y > x > w > v > ... b > a > Z > Y > X > ... > B > A` <br>
-(...) The three dots here simply indicate an intentional omission of the letters but the pattern should be clear. 
+(...) The three dots here simply indicate an intentional omission of the letters but the pattern should be clear. <br>
+<br>
+So, how will javascript compare longer strings (i.e words, sentences)? <br>
+Javascript goes over the string from left to right, comparing the unicodes (characters) one by one: <br>
+* Compares first characters of both words, decides whether one is greater or they're both equal. 
+* When both firsts are equal, goes on to compare the next two. 
+* Repeat until the end. 
+* If both strings end at the same length, then they are equal. Otherwise, the longer string is greater.
