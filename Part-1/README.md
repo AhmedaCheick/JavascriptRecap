@@ -46,7 +46,7 @@ false // output
 1.01 > 1 // greater than
 true 
 ```
-#### Strings: *This is where JS fails the sanity check* 
+#### Strings: *Sanity check* 
 
 ```javascript
 "z" > "a" // is "z" greater than "a"
@@ -57,4 +57,8 @@ Strings are ordered alphabetically. "a" being the 'smallest' to "z" the 'largest
 "Z" > "a" // is capital "Z" greater than "a"?
 false // output 
 ```
-Well, with the exception of a upper cases. uppercase letters are always “less” than lowercase ones.  
+Well, with the exception of uppercase letters. They are always “less” than lowercase ones. 
+<br>
+To visually see it from "largest" to "smallest": <br>
+`z > y > x > w > v > ... b > a > Z > Y > X > ... > B > A` <br>
+(...) The three dots here simply indicate an intentional omission of the letters but the pattern should be clear. 
