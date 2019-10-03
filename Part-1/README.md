@@ -46,7 +46,7 @@ false // output
 1.01 > 1 // greater than
 true 
 ```
-#### `Strings: *Sanity check*` 
+#### `Strings:` *Sanity Check* 
 
 ```javascript
 "z" > "a" // is "z" greater than "a"
@@ -91,6 +91,7 @@ Applied to Boolean values. <br>
 * not: `!`
 <br>
 `!` flips the value behind it. 
+<br>
 ```javascript
 !true // read: not true
 false // output: produces false 
