@@ -38,7 +38,7 @@ typeof "S" // code
 "string" // output 
 ```
 ### Comparison:
-#### Numeric: So far so good
+#### Numeric: 
 ```javascript
 3 < 2 // less than
 false // output
@@ -52,7 +52,7 @@ true
 "z" > "a" // is "z" greater than "a"
 true // output
 ```
-Strings are ordered alphabetically. "a" being the 'smallest' to "z" the 'largest'.
+Strings are ordered **alphabetically**. "a" being the 'smallest' to "z" the 'largest'.
 ```javascript
 "Z" > "a" // is capital "Z" greater than "a"?
 false // output 
@@ -60,7 +60,9 @@ false // output
 Well, with the exception of uppercase letters. They are always “less” than lowercase ones. 
 <br>
 To visually see it from "largest" to "smallest": <br>
+<br>
 `z > y > x > w > v > ... b > a > Z > Y > X > ... > B > A` <br>
+<br>
 (...) The three dots here simply indicate an intentional omission of the letters but the pattern should be clear. <br>
 <br>
 So, how will javascript compare longer strings (i.e words, sentences)? <br>
