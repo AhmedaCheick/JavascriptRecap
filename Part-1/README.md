@@ -99,3 +99,23 @@ false // output: produces false
 ```
 <br>
 <strong>null</strong> and <strong>undefined</strong> are empty values and the difference can be ignored. 
+
+#### `Automatic Conversion`
+Javascript tries to please everyone. There's a cost to that "openness".
+```javascript
+12 * null // multiplication 
+0 // output 
+
+"51" - 1 // the string "51" minus 1
+50 // outputs the number 50
+
+"5" + 1 // string "5" plus 1
+"51" // outputs the string "51"
+
+"five" * 2 // string "five" times 2
+NaN // output 'Not a Number'
+```
+This is just Javascript being Javascript. This is called *type coercion*. JS notices an operation and tries its "best" to satisfy the instructions by quietly converting the values. <br>
+In the **first case**, `null` becomes `0`. In the **second case**, it recognizes `"51"` as a string but also realizes that `-` is an operator on numerics and `1` is also a numeric value. Whereas in the **third case**, the `+` operator is used for concatinating two strings together and "5" is already a string, so it makes sense to cast `1` as a string as well. 
+
+
