@@ -1,7 +1,7 @@
 # JS Recap
 ## Agenda 
 ---
-### Types, Operators and Values
+### `Types, Operators and Values`
 
 ```javascript
 // numbers 
@@ -19,7 +19,7 @@
 Infinity // + infinity 
 -Infinity // - infinity 
 
-NaN // not a number 
+NaN // not a number (confused)
 
 // As long as the the quotes at the start and the end of the string match
 // String can be represented in 3 ways
@@ -37,8 +37,8 @@ typeof 4; // code
 typeof "S" // code
 "string" // output 
 ```
-### Comparison:
-#### Numeric: 
+### `Comparison:`
+#### `Numeric:` 
 ```javascript
 3 < 2 // less than
 false // output
@@ -46,7 +46,7 @@ false // output
 1.01 > 1 // greater than
 true 
 ```
-#### Strings: *Sanity check* 
+#### `Strings: *Sanity check*` 
 
 ```javascript
 "z" > "a" // is "z" greater than "a"
@@ -65,9 +65,33 @@ To visually see it from "largest" to "smallest": <br>
 <br>
 (...) The three dots here simply indicate an intentional omission of the letters but the pattern should be clear. <br>
 <br>
-So, how will javascript compare longer strings (i.e words, sentences)? <br>
+So, how will javascript compare **longer** strings (i.e words, sentences)? <br>
 Javascript goes over the string from left to right, comparing the unicodes (characters) one by one: <br>
 * Compares first characters of both words, decides whether one is greater or they're both equal. 
 * When both firsts are equal, goes on to compare the next two. 
 * Repeat until the end. 
 * If both strings end at the same length, then they are equal. Otherwise, the longer string is greater.
+
+#### `Other`
+```javascript
+>= // greatr than or equal to 
+<= // less than or equal to 
+!= // not equal to 
+```
+**Note:** There is only one value in JavaScript that is not equal to itself, and that is `NaN`. 
+```javascript
+console.log(NaN == NaN)
+false // this is bc it's the result of nonsensical computation and that can be different every time.
+``` 
+
+#### `Logical Operators`
+Applied to Boolean values. <br>
+* and: `&&`
+* or: `||`
+* not: `!`
+<br>
+`!` flips the value behind it. 
+```javascript
+!true // read: not true
+false // output: produces false 
+```
