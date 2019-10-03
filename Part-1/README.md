@@ -117,5 +117,8 @@ NaN // output 'Not a Number'
 ```
 This is just Javascript being Javascript. This is called *type coercion*. JS notices an operation and tries its "best" to satisfy the instructions by quietly converting the values. <br>
 In the **first case**, `null` becomes `0`. In the **second case**, it recognizes `"51"` as a string but also realizes that `-` is an operator on numerics and `1` is also a numeric value. Whereas in the **third case**, the `+` operator is used for concatinating two strings together and "5" is already a string, so it makes sense to cast `1` as a string as well. 
+<br>
 
-
+`==` tests whether both values are the same.<br>
+`===` tests whether the type and content matches. 
+`!==` Will return true if they're not equal in type and/or content. 
