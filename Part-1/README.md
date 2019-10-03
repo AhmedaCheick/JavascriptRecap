@@ -90,9 +90,12 @@ Applied to Boolean values. <br>
 * or: `||`
 * not: `!`
 <br>
-`!` flips the value behind it. 
+**!** flips the value behind it. 
 <br>
+
 ```javascript
 !true // read: not true
 false // output: produces false 
 ```
+<br>
+**null** and **undefined** are empty values and the difference can be ignored. 
