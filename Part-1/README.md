@@ -122,3 +122,6 @@ In the **first case**, `null` becomes `0`. In the **second case**, it recognizes
 `==` tests whether both values are the same.<br>
 `===` tests whether the type and content matches. <br>
 `!==` Will return true if they're not equal in type and/or content. 
+
+### `Bindings`
+JS uses three keywords for variable bindings, `let`, `var` and `const`. 
