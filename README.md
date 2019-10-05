@@ -160,7 +160,7 @@ else {
     console.log(`You are not ${25}!`)
 }
 ```
-You can check "if" multiple expressions are tru by chaining `else if`s. 
+You can check whether multiple expressions are true by chaining `else if`s. 
 ```javascript
 if (expressionOne) {
     doSomething();
@@ -174,4 +174,10 @@ else if (expressionThree) {
 else (whenNothingWorks) {
     wellDoThisThen();
 }
+```
+**Note:** Indentation in javascript is simply to enhance code readibility unlike Python which "breathes" it. You could write your program in a single line if you wanted to. **Don't do it**!<br>
+if you insist:
+```javascript
+if (expressionOne){doSomething();} else if(expressionTwo{
+doSomethingElse();}else if (expressionThree){doAnotherThing();} else (whenNothingWorks{wellDoThisThen();}
 ```
