@@ -123,5 +123,15 @@ In the **first case**, `null` becomes `0`. In the **second case**, it recognizes
 `===` tests whether the type and content matches. <br>
 `!==` Will return true if they're not equal in type and/or content. 
 
-### `Bindings`
-JS uses three keywords for variable bindings, `let`, `var` and `const`. 
+### `Bindings (Variables)`
+Binding or variable assignment can be used interchangeably. JS uses three keywords for binding (creating a new variable), `let`, `var` (short for "variable") and `const` (short for "constant"). 
+```javascript
+let name = "Ahmeda"; // 'let' connects the string "Ahmeda" to the binding (variable) 'name'.
+
+// multiple bindings at the same time
+let lastName = "Cheick", hobby = "Playing Soccer"; 
+
+// using const to assign an age binding 
+const age = 25;
+```
+`const` is used to define a constant variable which points to its value for as long as it 'lives'. So probably setting age to 25 with `const` isn't a good idea if I plan on living longer! 
