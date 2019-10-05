@@ -160,3 +160,18 @@ else {
     console.log(`You are not ${25}!`)
 }
 ```
+You can check "if" multiple expressions are tru by chaining `else if`s. 
+```javascript
+if (expressionOne) {
+    doSomething();
+}
+else if (expressionTwo) {
+    doSomethingElse();
+}
+else if (expressionThree) {
+    doAnotherThing();
+}
+else (whenNothingWorks) {
+    wellDoThisThen();
+}
+```
