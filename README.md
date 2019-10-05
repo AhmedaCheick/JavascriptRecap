@@ -147,3 +147,16 @@ const age = 25;
 **Note:** `var` is the way variables were declared prior to 2015 in Javascript and it does mostly the same thing as `let`, except that it's visible outside of its defined scope. 
 
 ### `Conditionals` 
+#### `if` `else` statements
+`if` keyword executes or skips a statement depending on the value of a Boolean expression.
+```javascript
+if (age == 25) {
+    console.log(`You are ${age} years old!`);
+}
+```
+When the expression wrapped in braces {} isn't true, the program skips. Adding an `else` keyword lets it know what to do in that case. 
+```javascript
+else {
+    console.log(`You are not ${25}!`)
+}
+```
