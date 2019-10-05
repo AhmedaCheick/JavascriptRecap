@@ -164,14 +164,11 @@ You can check whether multiple expressions are true by chaining `else if`s.
 ```javascript
 if (expressionOne) {
     doSomething();
-}
-else if (expressionTwo) {
+} else if (expressionTwo) {
     doSomethingElse();
-}
-else if (expressionThree) {
+} else if (expressionThree) {
     doAnotherThing();
-}
-else (whenNothingWorks) {
+} else (whenNothingWorks) {
     wellDoThisThen();
 }
 ```
