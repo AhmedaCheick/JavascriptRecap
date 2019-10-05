@@ -39,7 +39,7 @@ typeof "S" // code
 "string" // output 
 ```
 
-#### `Numeric Comparison:` 
+### `Numeric Comparison:` 
 ```javascript
 3 < 2 // less than
 false // output
@@ -47,7 +47,7 @@ false // output
 1.01 > 1 // greater than
 true 
 ```
-#### `Strings Comparison:` *Sanity Check* 
+### `Strings Comparison:` *Sanity Check* 
 
 ```javascript
 "z" > "a" // is "z" greater than "a"
@@ -73,7 +73,7 @@ Javascript goes over the string from left to right, comparing the unicodes (char
 * Repeat until the end. 
 * If both strings end at the same length, then they are equal. Otherwise, the longer string is greater.
 
-#### `Other`
+### `Other`
 ```javascript
 >= // greatr than or equal to 
 <= // less than or equal to 
@@ -85,7 +85,7 @@ console.log(NaN == NaN)
 false // this is bc it's the result of nonsensical computation and that can be different every time.
 ``` 
 
-#### `Logical Operators`
+### `Logical Operators`
 Applied to Boolean values. <br>
 * and: `&&`
 * or: `||`
@@ -101,7 +101,7 @@ false // output: produces false
 <br>
 <strong>null</strong> and <strong>undefined</strong> are empty values and the difference can be ignored. 
 
-#### `Automatic Conversion`
+### `Automatic Conversion`
 Javascript tries to please everyone. There's a cost to that "openness".
 ```javascript
 12 * null // multiplication 
@@ -139,8 +139,7 @@ const age = 25;
 
 **Note:** `var` is the way variables were declared prior to 2015 in Javascript and it does mostly the same thing as `let`, except that it's visible outside of its defined scope. 
 
-### `Conditionals` 
-#### `if` `else` statements
+### Conditionals: `if` `else` statements
 `if` keyword executes or skips a statement depending on the value of a Boolean expression.
 ```javascript
 if (age == 25) {
