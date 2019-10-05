@@ -1,14 +1,7 @@
 # JavascriptRecap
 
-## Agenda
-* The Fundamentals
-*  Part 1
-*  Part 2
-
+## The Fundamentals
 ---
-## Arm yourself with the Fundamentals
----
-
 ### `Types, Operators and Values`
 
 ```javascript
