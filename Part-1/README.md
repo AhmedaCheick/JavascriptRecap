@@ -37,8 +37,8 @@ typeof 4; // code
 typeof "S" // code
 "string" // output 
 ```
-### `Comparison:`
-#### `Numeric:` 
+
+#### `Numeric Comparison:` 
 ```javascript
 3 < 2 // less than
 false // output
@@ -46,7 +46,7 @@ false // output
 1.01 > 1 // greater than
 true 
 ```
-#### `Strings:` *Sanity Check* 
+#### `Strings Comparison:` *Sanity Check* 
 
 ```javascript
 "z" > "a" // is "z" greater than "a"
@@ -135,3 +135,7 @@ let lastName = "Cheick", hobby = "Playing Soccer";
 const age = 25;
 ```
 `const` is used to define a constant variable which points to its value for as long as it 'lives'. So probably setting age to 25 with `const` isn't a good idea if I plan on living longer! 
+
+**Note:** `var` is the way variables were declared prior to 2015 in Javascript and it does mostly the same thing as `let`, except that it's visible outside of its defined scope. 
+
+### `Conditionals` 
