@@ -1,6 +1,7 @@
 # JavascriptRecap
 
 ## Agenda
+* The Fundamentals
 *  Part 1
 *  Part 2
 
