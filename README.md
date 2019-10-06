@@ -171,4 +171,11 @@ if (expressionOne){doSomething();} else if(expressionTwo{
 doSomethingElse();}else if (expressionThree){doAnotherThing();} else (whenNothingWorks{wellDoThisThen();}
 ```
 <br>
-### `For` Loops
+### `For` Loops:
+<br>
+A simple for loop:
+```javascript
+for (let number = 0; number <= 6; number + 2) {
+    console.log(number);
+}
+```
