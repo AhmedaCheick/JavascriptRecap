@@ -315,7 +315,8 @@ someArray.unshift(2); // adds the numb 2 at the start of the array.
 ```
 <br>
 **Objects:** <br>
-Objects are a collection of properties seperated by commas. 
+Objects are a collection of properties seperated by commas. <br>
+
 ```javascript
 let someObject = {
     "type": true,
@@ -323,7 +324,7 @@ let someObject = {
 }
 ```
 Properties whose names aren't valid variables need to be quoted. <br>
-You can assign new values using the `=` operator. `someObject.date = "10/06/2019"`. If it already existed, it will replace its value. 
+You can assign new values using the `=` operator. `someObject.date = "10/06/2019"`. If it already existed, it will replace its value. <br>
 ```javascript
 delete someObject.type; // deletes the property 'type'
 
