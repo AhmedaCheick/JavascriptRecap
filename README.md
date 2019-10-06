@@ -221,7 +221,7 @@ Functions in Javascript are objects and possess all its capabilities. <br>
 ```javascript
 const makeSomeNoise() = function() {
     console.log("Honk Honk!");
-}
+};
 makeSomeNoise();
 "Honk Honk!" // console output 
 ```
@@ -229,10 +229,27 @@ They can take multiple parameters or no parameter at all. Its body which is cont
 ```javascript
 const addNumbers = function (numb1, numb2, numb3) {
     console.log(numb1 + numb2 + numb3); 
-}
+};
 addNumbers(1, 2, 3);
 6 // console output
 ```
 The values of those parameters are assigned by its caller. Then a `return` statement determines the final output of that function. 
 
-**Note:** Each binding (variable) in JS has a scope where it's 'visible'. Variables with global scopre are visible and can be used anywhere in the program. Variables created inside a function are only visible within that function, they are local variables. Unless declared using the `var` keyword, in that case they are gloabl. 
+**Note:** Each binding (variable) in JS has a scope where it's 'visible'. Variables with global scopre are visible and can be used anywhere in the program. Variables created inside a function are only visible within that function, they are local variables. Unless declared using the `var` keyword, in that case they are gloabl. There are also degrees to locality and functions can be nested.
+
+### Function Declaration:
+```javascript
+function addNUmbers(n1, n2) {
+    return n1 + n2;
+}
+```
+**Note:** Function declaration doesn't require a semicolon after the function and it works differently. 
+```javascript
+// logging out half a quote and a function
+console.log("'Always remember that you are absolutely unique." + secondPart());
+
+function secondPart() {
+    return " Just like everyone else.' -Margaret Mead";
+}
+```
+If you haven't noticed, we called the function `secondPart()` before we've even declared it. This is because function declarations are not part of the top-to-bottom execution you're used to. Those functions get moved to the top of **their scope** and can be used anywhere within tha scope. 
