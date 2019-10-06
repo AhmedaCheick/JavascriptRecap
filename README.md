@@ -183,3 +183,5 @@ for (let number = 0; number <= 6; number + 2) {
     console.log(number);
 }
 ```
+A `for` loop consists of three parts, the `for` keyword itself, the statement in parentheses and finally the body whithin the {} which contains the instructions of what to do at every iteration. <br>
+The statement `(let number = 0; number <= 6; number +2)` does three things seperated by two semicolons. It initializes the loop, checks if it must continue and how it must update. 
