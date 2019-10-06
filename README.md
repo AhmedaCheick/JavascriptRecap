@@ -253,3 +253,21 @@ function secondPart() {
 }
 ```
 If you haven't noticed, we called the function `secondPart()` before we've even declared it. This is because function declarations are not part of the top-to-bottom execution you're used to. Those functions get moved to the top of **their scope** and can be used anywhere within tha scope. 
+
+### Arrow Function
+The arrow `=>` comes after the list of the parameters then followed by the function's body. You can remember it this way "This list of params will produce the following".
+
+```javascript
+const addNumbers = (n1, n2) => {
+    return n1 + n2; 
+};
+
+// these two do the same thing. 
+const squared = (x) => { return x * 2; };
+const squared =  x  => x * 2; // you can omit the braces {} for a single expression in the body
+
+// when an arrow function has no params
+const saySomething = () => {
+    console.log("It was over my head.");
+};
+```
