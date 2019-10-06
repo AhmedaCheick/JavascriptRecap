@@ -10,17 +10,20 @@
 
 <body>
     <script>
-        let someObject = {
-            "type": true,
-            "day": "Sunday",
+        function speak(speech) {
+            console.log(`The ${this.type} says '${speech}'`);
         }
-        console.log(someObject);
 
-        someObject.date = "06/10";
+        let dog1 = {
+            type: "Chihuahua",
+            speak
+        };
+        let hungryDog = {
+            type: "boxer",
+            speak
+        };
 
-        console.log(someObject);
-
-        let someArray = [2,57,63,5];
+        hungryDog.speak("I am hungry");
     </script>
 </body>
 

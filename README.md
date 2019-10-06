@@ -362,6 +362,45 @@ console.log(addition(2));
 Infinity // console output 
 ```
 
+### Callback Functions:
+
+We pass a function as an argument to another function that might, at a later point in execution, call the passed-in function. 
+
+```javascript
+function uselessFunction (callMeBack()) {
+    return callMeBack();
+}
+```
+## Back to Objects:
+As you know well by now, methods are properties that hold function values. We call them this way `someObject.method()`. A variable called `this` automatically points at the object it was called on. Let's slowly build on this. 
+```javascript
+let dog = {};
+
+dog.speak = function (speech) {
+    console.log(`The dog says: ${speech}`);
+}
+
+dog.speak("I can speak now!");
+"The dog says: I can talk now!" // output 
+```
+Nothing new there! But watch closely:
+```javascript
+ function speak(speech) {
+            console.log(`The ${this.type} says '${speech}'`);
+        }
+
+        let dog1 = {
+            type: "Chihuahua",
+            speak
+        };
+        let hungryDog = {
+            type: "boxer",
+            speak
+        };
+
+        hungryDog.speak("I am hungry");
+```
+
 ## Promises
 <img src=images/promise.gif width="230"> <br>
 
