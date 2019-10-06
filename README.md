@@ -255,7 +255,7 @@ function secondPart() {
 If you haven't noticed, we called the function `secondPart()` before we've even declared it. This is because function declarations are not part of the top-to-bottom execution you're used to. Those functions get moved to the top of **their scope** and can be used anywhere within tha scope. 
 
 ### Arrow Function
-The arrow `=>` comes after the list of the parameters then followed by the function's body. You can remember it this way "This list of params will produce the following".
+The arrow `=>` comes after the parameters then followed by the function's body. You can remember it this way "This list of params => will produce the following".
 
 ```javascript
 const addNumbers = (n1, n2) => {
@@ -270,4 +270,22 @@ const squared =  x  => x * 2; // you can omit the braces {} for a single express
 const saySomething = () => {
     console.log("It was over my head.");
 };
+```
+### Parameters
+```javascript
+function addition(x1, x2) {
+    return x1 + x2;
+}
+
+console.log(addition(2, 2, "It's a beautiful day!"));
+```
+**Note:** if you pass too many arguments, they will get ignored. However, when you pass too few arguements, they will get replaced with `undifined`. <br>
+The `=` operator is used as default in case an argument isn't passed. 
+
+```javascript
+function addition(x1, x2 = Infinity) {
+    return x1 + x2;
+}
+console.log(addition(2));
+Infinity // console output 
 ```
