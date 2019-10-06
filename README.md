@@ -212,5 +212,17 @@ switch (true) {
 ```
 **Note:** Don't forget the `break` statement, or else it will execute code you don't want. 
 
+## Objects:
+
 ## Functions: 
+Functions in Javascript are objects and possess all its capabilities. <br>
 <img src=images/functions.gif width="200"> <br>
+
+```javascript
+const makeSomeNoise() = function() {
+    console.log("Honk Honk!");
+}
+makeSomeNoise();
+"Honk Honk!" // console output 
+```
+
