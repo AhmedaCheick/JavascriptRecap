@@ -225,4 +225,14 @@ const makeSomeNoise() = function() {
 makeSomeNoise();
 "Honk Honk!" // console output 
 ```
+They can take multiple parameters or no parameter at all. Its body which is contained in the braces {} gets executed every time the function is called. 
+```javascript
+const addNumbers = function (numb1, numb2, numb3) {
+    console.log(numb1 + numb2 + numb3); 
+}
+addNumbers(1, 2, 3);
+6 // console output
+```
+The values of those parameters are assigned by its caller. Then a `return` statement determines the final output of that function. 
 
+**Note:** Each binding (variable) in JS has a scope where it's 'visible'. Variables with global scopre are visible and can be used anywhere in the program. Variables created inside a function are only visible within that function, they are local variables. Unless declared using the `var` keyword, in that case they are gloabl. 
