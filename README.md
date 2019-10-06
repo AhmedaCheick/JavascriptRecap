@@ -186,7 +186,7 @@ for (let number = 0; number <= 6; number + 2) {
 A `for` loop consists of three parts, the `for` keyword itself, the statement in parentheses and finally the body whithin the {} which contains the instructions of what to do at every iteration. <br>
 The statement `(let number = 0; number <= 6; number +2)` does three things seperated by two semicolons. It initializes the loop, checks if it must continue and how it must update. <br>
 
-### `switch`
+### `switch` | Act-07
 Switch allows you to put a number of scenarios (`case` labels) and javascript will start executing at the label that corresponds to the value that `switch` was given, or `default`s when no matching value was found. <br>
 Let's say, depending on your budget you want to go somewhere for a vacation. 
 
@@ -371,7 +371,7 @@ function uselessFunction (callMeBack()) {
     return callMeBack();
 }
 ```
-## Back to Objects:
+## Back to Objects: `this` | Act-07
 As you know well by now, methods are properties that hold function values. We call them this way `someObject.method()`. A variable called `this` automatically points at the object it was called on. Let's slowly build on this. 
 ```javascript
 let dog = {};
@@ -400,7 +400,85 @@ let hungryDog = {
 
 hungryDog.speak("I am hungry");
 ```
+Think of `this` as an extra parameter which isn't passed explicitly! However, if you want to pass it, you use a function's `call` method which takes `this` as its first argument and the rest arguements passed to it as normal arguements. 
 
+```javascript
+speak.call(hungryDog, "Burp!");
+"The boxer says 'Burp!'" // output 
+```
 ## Promises
 <img src=images/promise.gif width="230"> <br>
+Javascript relies a lot on asynchronous computations. A promise is a placeholder for a value that we don’t have now but will have later. Well there ar only two possible outcomes; we either make good on our promise and we get the data as a value or something unexpected happens in that case we get an error. <b>
+
+
+```javascript
+var promise1 = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve('foo');
+            }, 3000);
+        });
+
+promise1.then(function (value) {
+    console.log(value);
+    // expected output: "foo"
+});
+
+console.log(promise1);
+```
+To create a promise we use the built-in `Promise` constructor, to which pass a function. This, *executor* function, has two parameters. `resolve` and `reject`. 
+This code (copied from documentation) uses the promise by calling the built-in `then` method on the `Promise`. <br>
+<img src=images/promiseFlow.png width="450"> <br>
+Let's say you're pulling a JSON file of all the troops and you want to send orders to the first soldier (at index zero). 
+```javascript
+getJSON("data/troops.json", function(err, troops){
+  getJSON(troops[0].location, function(err, locationInfo){
+    sendOrder(locationInfo, function(err, status){
+     /*Process status*/
+}) })
+});
+
+```
+This code is difficult to understand and adding new steps can be very painful. Also, some of these steps can be done in parallel. Let's say we want to set a plan in motion that require us to know which soldier we have at our disposal, the plan itsel, and the location where our plan will play out, we could write something like this.
+```javascript
+        var troops, mapInfo, plan;
+        
+        d3.json("data/troops.json", function (err, data) {
+            if (err) {
+                processError(err);
+                return;
+            }
+            troops = data;
+            actionItemArrived();
+        });
+        d3.json("data/mapInfo.json", function (err, data) {
+            if (err) {
+                processError(err);
+                return;
+            }
+            mapInfo = data;
+            actionItemArrived();
+        });
+
+        d3.json("plan.json", function (err, data) {
+            if (err) {
+                processError(err);
+                return;
+            }
+            plan = data;
+            actionItemArrived();
+        });
+
+        function actionItemArrived() {
+            if (ninjas != null && mapInfo != null && plan != null) {
+                console.log("The plan is ready to be set in motion!");
+            }
+        }
+
+        function processError(err) {
+            alert("Error", err)
+        }
+```
+
+
+
 

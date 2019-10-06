@@ -10,20 +10,18 @@
 
 <body>
     <script>
-        function speak(speech) {
-            console.log(`The ${this.type} says '${speech}'`);
-        }
+        var promise1 = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve('foo');
+            }, 3000);
+        });
 
-        let dog1 = {
-            type: "Chihuahua",
-            speak
-        };
-        let hungryDog = {
-            type: "boxer",
-            speak
-        };
+        promise1.then(function (value) {
+            console.log(value);
+            // expected output: "foo"
+        });
 
-        hungryDog.speak("I am hungry");
+        console.log(promise1);
     </script>
 </body>
 
