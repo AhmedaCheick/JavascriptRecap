@@ -212,7 +212,6 @@ switch (true) {
 ```
 **Note:** Don't forget the `break` statement, or else it will execute code you don't want. 
 
-## Objects:
 
 ## Functions: 
 Functions in Javascript are objects and possess all its capabilities. <br>
@@ -289,3 +288,23 @@ function addition(x1, x2 = Infinity) {
 console.log(addition(2));
 Infinity // console output 
 ```
+
+## Objects & Arrays
+**Arryas:** <br>
+
+Arrays (lists) in Javascript are declared using square brackets.
+```javascript
+let someArray = [2,57,63,5];
+```
+Every element has an index, starting from `0` and can be retrieved this way `someArray[0]`. <br>
+You can access its property using a dot `.` or brackets. 
+`someArray.length` or `someArray["length"]` do the same thing. <br>
+**Note:** Properties that contain functions are called methods.  <br>
+<br>
+**Objects:** <br>
+Objects are a collection of properties. 
+
+
+## Promises
+<img src=images/promise.gif width="230"> <br>
+
