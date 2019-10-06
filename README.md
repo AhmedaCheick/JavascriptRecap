@@ -137,7 +137,7 @@ const age = 25;
 ```
 `const` is used to define a constant variable which points to its value for as long as it 'lives'. So probably setting age to 25 with `const` isn't a good idea if I plan on living longer! 
 
-**Note:** `var` is the way variables were declared prior to 2015 in Javascript and it does mostly the same thing as `let`, except that it's visible outside of its defined scope. 
+**Note:** `var` is the way variables were declared prior to 2015 in Javascript and it does mostly the same things as `let`, except that it's visible outside of its defined scope. 
 
 ### Conditionals: `if` `else` statements
 `if` keyword executes or skips a statement depending on the value of a Boolean expression.
@@ -146,10 +146,10 @@ if (age == 25) {
     console.log(`You are ${age} years old!`);
 }
 ```
-When the expression wrapped in braces {} isn't true, the program skips. Adding an `else` keyword lets it know what to do in that case. 
+When the statement wrapped in braces () isn't true, the program skips. Adding an `else` keyword lets it know what to do in that case. 
 ```javascript
 else {
-    console.log(`You are not ${25}!`)
+    console.log(`You are not ${age}!`)
 }
 ```
 You can check whether multiple expressions are true by chaining `else if`s. 
@@ -184,4 +184,29 @@ for (let number = 0; number <= 6; number + 2) {
 }
 ```
 A `for` loop consists of three parts, the `for` keyword itself, the statement in parentheses and finally the body whithin the {} which contains the instructions of what to do at every iteration. <br>
-The statement `(let number = 0; number <= 6; number +2)` does three things seperated by two semicolons. It initializes the loop, checks if it must continue and how it must update. 
+The statement `(let number = 0; number <= 6; number +2)` does three things seperated by two semicolons. It initializes the loop, checks if it must continue and how it must update. <br>
+
+### `switch`
+Switch allows to put a number of scenarios (`case` labels) and javascript will start executing at the label that corresponds to the value that `switch` was given, or `default`s when no matching value was found. <br>
+Let's say, depending on your budget you want to go somewhere for a vacation. 
+
+```javascript
+let budget = parseInt(prompt("What's your budget"));
+
+switch (true) {
+    case budget < 100:
+    console.log("Take a walk around the block.");
+    break;
+
+    case budget >= 1000:
+    console.log("let's to the beach");
+    break;
+
+    case budget > 5000:
+    console.log("Hello, Vegas!")
+
+    default:
+    console.log("Let's discuss your finances.");
+    break;
+    }
+```

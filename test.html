@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let budget = parseInt(prompt("What's your budget"));
+    switch (true) {
+        case budget < 100:
+        console.log("Take a walk around the block.");
+        break
+
+        case budget >= 1000:
+        console.log("let's to the beach");
+        break;
+
+        case budget > 5000:
+        console.log("Hello, Vegas!")
+
+        default:
+        console.log("Let's discuss your finances.");
+        break;
+    }
+    </script>
+</body>
+</html>
