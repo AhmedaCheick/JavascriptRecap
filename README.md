@@ -212,6 +212,79 @@ switch (true) {
 ```
 **Note:** Don't forget the `break` statement, or else it will execute code you don't want. 
 
+## Objects & Arrays
+**Arryas:** <br>
+
+Arrays (lists) in Javascript are declared using square brackets.
+```javascript
+let someArray = [2,57,63,5];
+```
+Every element has an index, starting from `0` and can be retrieved this way `someArray[0]`. <br>
+You can access its property using a dot `.` or brackets. 
+`someArray.length` or `someArray["length"]` do the same thing. <br>
+**Note:** Properties that contain functions are called methods.  <br>
+```javascript
+someArray.push(76); // adds the number 76 at the end of the array and reutrns the new length of the array
+
+someArray.pop(); // removes the last element and returns it.
+76 // output  
+
+// the corresponding methods for adding and removing elements
+// at the start of an array are called unshift and shift
+
+someArray.shift(); // removes first element 2 and returns it
+
+someArray.unshift(2); // adds the numb 2 at the start of the array.
+```
+**Note:** To search for a specific element in an array we use `indexOf` method. Going from the start to end of the array it will return the index of that element when found. Otherwise, it will return `-1`. <br>
+To search from end to start instead we use `lastIndexOf`. **Also**, they both take a second optional argument indicating where to start searching from. 
+
+```javascript
+console.log([1, 2, 3, 2, 1].indexOf(2));
+ // → 1
+ console.log([1, 2, 3, 2, 1].lastIndexOf(2));
+ // → 3
+
+ console.log([1, 2, 3, 2, 1].indexOf(2,2)) // notice how it starts searching only from index 2.
+ // → 3
+
+ console.log([0, 1, 2, 3, 4].slice(2, 4)); // slice method used to return an inner array based on a range of indices. The second number is exclusive
+ // → [2, 3]
+```
+The `concat` method can be used to glue arrays together to create a new array. 
+
+<br>
+<strong>Objects</strong>
+<br>
+Objects are a collection of properties seperated by commas. <br>
+
+```javascript
+let someObject = {
+    "type": true,
+    "day": "Sunday",
+}
+```
+Properties whose names aren't valid variables need to be quoted. <br>
+You can assign new values using the `=` operator. `someObject.date = "10/06/2019"`. If it already existed, it will replace its value. <br>
+```javascript
+delete someObject.type; // deletes the property 'type'
+
+console.log("type" in someObject); //checks whether 'type' still exists
+false // console output 
+
+Object.keys(someObject); // return the properties (keys)
+["day","date"] // output 
+
+Object.values(someObject) // similarly this one return the values
+["Sunday", "10/06/2019"] // output 
+
+Object.entries(someObject) // returns each key-value pair as an array.
+
+someObject.date // the key can also be used to access the value
+"10/06/2019" // output 
+
+```
+
 
 ## Functions: 
 Functions in Javascript are objects and possess all its capabilities. <br>
@@ -288,72 +361,6 @@ function addition(x1, x2 = Infinity) {
 console.log(addition(2));
 Infinity // console output 
 ```
-
-## Objects & Arrays
-**Arryas:** <br>
-
-Arrays (lists) in Javascript are declared using square brackets.
-```javascript
-let someArray = [2,57,63,5];
-```
-Every element has an index, starting from `0` and can be retrieved this way `someArray[0]`. <br>
-You can access its property using a dot `.` or brackets. 
-`someArray.length` or `someArray["length"]` do the same thing. <br>
-**Note:** Properties that contain functions are called methods.  <br>
-```javascript
-someArray.push(76); // adds the number 76 at the end of the array and reutrns the new length of the array
-
-someArray.pop(); // removes the last element and returns it.
-76 // output  
-
-// the corresponding methods for adding and removing elements
-// at the start of an array are called unshift and shift
-
-someArray.shift(); // removes first element 2 and returns it
-
-someArray.unshift(2); // adds the numb 2 at the start of the array.
-```
-**Note:** To search for a specific element in an array we use `indexOf` method. Going from the start to end of the array it will return the index of that element when found. Otherwise, it will return `-1`. <br>
-To search from end to start instead we use `lastIndexOf`. 
-
-```javascript
-console.log([1, 2, 3, 2, 1].indexOf(2));
- // → 1
- console.log([1, 2, 3, 2, 1].lastIndexOf(2));
- // → 3
-```
-<br>
-<strong>Objects</strong>
-<br>
-Objects are a collection of properties seperated by commas. <br>
-
-```javascript
-let someObject = {
-    "type": true,
-    "day": "Sunday",
-}
-```
-Properties whose names aren't valid variables need to be quoted. <br>
-You can assign new values using the `=` operator. `someObject.date = "10/06/2019"`. If it already existed, it will replace its value. <br>
-```javascript
-delete someObject.type; // deletes the property 'type'
-
-console.log("type" in someObject); //checks whether 'type' still exists
-false // console output 
-
-Object.keys(someObject); // return the properties (keys)
-["day","date"] // output 
-
-Object.values(someObject) // similarly this one return the values
-["Sunday", "10/06/2019"] // output 
-
-Object.entries(someObject) // returns each key-value pair as an array.
-
-someObject.date // the key can also be used to access the value
-"10/06/2019" // output 
-
-```
-
 
 ## Promises
 <img src=images/promise.gif width="230"> <br>
