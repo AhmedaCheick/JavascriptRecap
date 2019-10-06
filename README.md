@@ -187,7 +187,7 @@ A `for` loop consists of three parts, the `for` keyword itself, the statement in
 The statement `(let number = 0; number <= 6; number +2)` does three things seperated by two semicolons. It initializes the loop, checks if it must continue and how it must update. <br>
 
 ### `switch`
-Switch allows to put a number of scenarios (`case` labels) and javascript will start executing at the label that corresponds to the value that `switch` was given, or `default`s when no matching value was found. <br>
+Switch allows you to put a number of scenarios (`case` labels) and javascript will start executing at the label that corresponds to the value that `switch` was given, or `default`s when no matching value was found. <br>
 Let's say, depending on your budget you want to go somewhere for a vacation. 
 
 ```javascript
@@ -210,3 +210,7 @@ switch (true) {
     break;
     }
 ```
+**Note:** Don't forget the `break` statement, or else it will execute the code you don't want. 
+
+## Functions: 
+<img src=images/functions.gif width="200"> <br>
