@@ -165,8 +165,10 @@ if (expressionOne) {
 }
 ```
 **Note:** Indentation in javascript is simply to enhance code readibility unlike Python which "breathes" it. You could write your program in a single line if you wanted to. **Don't do it**!<br>
-if you insist:
+Since you insist:
 ```javascript
 if (expressionOne){doSomething();} else if(expressionTwo{
 doSomethingElse();}else if (expressionThree){doAnotherThing();} else (whenNothingWorks{wellDoThisThen();}
 ```
+<br>
+### `For` Loops
