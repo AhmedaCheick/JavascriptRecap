@@ -313,8 +313,18 @@ someArray.shift(); // removes first element 2 and returns it
 
 someArray.unshift(2); // adds the numb 2 at the start of the array.
 ```
+**Note:** To search for a specific element in an array we use `indexOf` method. Going from the start to end of the array it will return the index of that element when found. Otherwise, it will return `-1`. <br>
+To search from end to start instead we use `lastIndexOf`. 
+
+```javascript
+console.log([1, 2, 3, 2, 1].indexOf(2));
+ // → 1
+ console.log([1, 2, 3, 2, 1].lastIndexOf(2));
+ // → 3
+```
 <br>
-**Objects:** <br>
+<strong>Objects</strong>
+<br>
 Objects are a collection of properties seperated by commas. <br>
 
 ```javascript
