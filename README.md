@@ -389,16 +389,16 @@ Nothing new there! But watch closely:
             console.log(`The ${this.type} says '${speech}'`);
         }
 
-        let dog1 = {
-            type: "Chihuahua",
-            speak
+let dog1 = {
+    type: "Chihuahua",
+    speak
         };
-        let hungryDog = {
-            type: "boxer",
-            speak
+let hungryDog = {
+    type: "boxer",
+    speak
         };
 
-        hungryDog.speak("I am hungry");
+hungryDog.speak("I am hungry");
 ```
 
 ## Promises
