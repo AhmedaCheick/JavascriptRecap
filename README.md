@@ -441,7 +441,7 @@ getJSON("data/troops.json", function(err, troops){
 This code is difficult to understand and adding new steps can be very painful. Also, some of these steps can be done in parallel. Let's say we want to set a plan in motion that require us to know which soldier we have at our disposal, the plan itsel, and the location where our plan will play out, we could write something like this.
 ```javascript
         var troops, mapInfo, plan;
-        
+
         d3.json("data/troops.json", function (err, data) {
             if (err) {
                 processError(err);
@@ -469,7 +469,7 @@ This code is difficult to understand and adding new steps can be very painful. A
         });
 
         function actionItemArrived() {
-            if (ninjas != null && mapInfo != null && plan != null) {
+            if (troops != null && mapInfo != null && plan != null) {
                 console.log("The plan is ready to be set in motion!");
             }
         }
