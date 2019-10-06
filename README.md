@@ -300,6 +300,19 @@ Every element has an index, starting from `0` and can be retrieved this way `som
 You can access its property using a dot `.` or brackets. 
 `someArray.length` or `someArray["length"]` do the same thing. <br>
 **Note:** Properties that contain functions are called methods.  <br>
+```javascript
+someArray.push(76); // adds the number 76 at the end of the array and reutrns the new length of the array
+
+someArray.pop(); // removes the last element and returns it.
+76 // output  
+
+// the corresponding methods for adding and removing elements
+// at the start of an array are called unshift and shift
+
+someArray.shift(); // removes first element 2 and returns it
+
+someArray.unshift(2); // adds the numb 2 at the start of the array.
+```
 <br>
 **Objects:** <br>
 Objects are a collection of properties seperated by commas. 
@@ -316,6 +329,18 @@ delete someObject.type; // deletes the property 'type'
 
 console.log("type" in someObject); //checks whether 'type' still exists
 false // console output 
+
+Object.keys(someObject); // return the properties (keys)
+["day","date"] // output 
+
+Object.values(someObject) // similarly this one return the values
+["Sunday", "10/06/2019"] // output 
+
+Object.entries(someObject) // returns each key-value pair as an array.
+
+someObject.date // the key can also be used to access the value
+"10/06/2019" // output 
+
 ```
 
 
