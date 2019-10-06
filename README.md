@@ -302,7 +302,21 @@ You can access its property using a dot `.` or brackets.
 **Note:** Properties that contain functions are called methods.  <br>
 <br>
 **Objects:** <br>
-Objects are a collection of properties. 
+Objects are a collection of properties seperated by commas. 
+```javascript
+let someObject = {
+    "type": true,
+    "day": "Sunday",
+}
+```
+Properties whose names aren't valid variables need to be quoted. <br>
+You can assign new values using the `=` operator. `someObject.date = "10/06/2019"`. If it already existed, it will replace its value. 
+```javascript
+delete someObject.type; // deletes the property 'type'
+
+console.log("type" in someObject); //checks whether 'type' still exists
+false // console output 
+```
 
 
 ## Promises
