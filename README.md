@@ -210,7 +210,7 @@ switch (true) {
     break;
     }
 ```
-**Note:** Don't forget the `break` statement, or else it will execute the code you don't want. 
+**Note:** Don't forget the `break` statement, or else it will execute code you don't want. 
 
 ## Functions: 
 <img src=images/functions.gif width="200"> <br>
