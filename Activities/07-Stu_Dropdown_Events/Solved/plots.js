@@ -12,6 +12,7 @@ function init() {
 
   Plotly.plot("pie", data, layout);
 }
+init();
 
 function updatePlotly(newdata) {
   var PIE = document.getElementById("pie");
